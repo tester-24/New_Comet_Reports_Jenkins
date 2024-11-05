@@ -1,6 +1,7 @@
 const { defineConfig } = require('cypress');
 
 module.exports = defineConfig({
+  video: true,
   reporter: 'cypress-mochawesome-reporter', // for html reports 
   projectId: "b6bh2b",
   reporterOptions: {
@@ -12,6 +13,8 @@ module.exports = defineConfig({
     inlineAssets: true,
     saveAllAttempts: false,
     enableCode:false,
+    embeddedvideos: true,
+    video: true,
   },
   //projectId: "m4t5cs",
   //projectId: "v4584h", 
