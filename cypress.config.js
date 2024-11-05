@@ -6,6 +6,7 @@ module.exports = defineConfig({
   reporterOptions: {
    
     charts: true,
+    video: true,
     reportPageTitle: 'custom-title',
     embeddedScreenshots: true,
     inlineAssets: true,
