@@ -150,7 +150,7 @@ it('New_Global_Report_Segment_Derivative', () => {
   
          // click on download by dropdown
       cy.wait(5000)
-      cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[2]/div/kendo-dropdownlist/button').click()
+      cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[2]/div/kendo-dropdownlist/button').click({force:true})
       
       //2. type  select type Date wise
       cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]/span[1]').should('be.visible')
