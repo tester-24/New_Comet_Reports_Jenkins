@@ -40,9 +40,14 @@ it.only('Comet_Jainam', () => {
     cy.get('.col-md-3 > .btn').should('be.visible')
     cy.get('.col-md-3 > .btn').click()
 
-    //Enter client code
+    // verify data shown 
     cy.wait(15000)
-    cy.get('.justify-content-end > :nth-child(3) > .form-control').should('be.visible')
-    cy.get('.justify-content-end > :nth-child(3) > .form-control').type('D1','{enter}')
+    cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid').should('be.visible')
+    //cy.get('#k-97d10905-3611-4949-b199-0f746f032919 > .k-grid-container > .k-grid-content').should('be.visible')
+    //click on d1 open the pop up 
+    cy.get('[data-kendo-grid-item-index="189"] > [data-kendo-grid-column-index="0"] > .mtf_button').click()
+    cy.wait(2000)
+    cy.get('.modal-content > .btn-close').click({force:true})
+
 
 })
