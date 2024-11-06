@@ -167,7 +167,7 @@ it.only('New_Ledger_Report_Segment_Equity', () => {
        cy.wait(5000)
        
        //Click on Contract/Bills
-      // cy.wait(3000)
+       cy.wait(5000)
        cy.get('#bills').should('be.visible')
        cy.get('#bills').click({force:true})
        
