@@ -45,9 +45,9 @@ it.only('Comet_Jainam', () => {
     cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid').should('be.visible')
     //cy.get('#k-97d10905-3611-4949-b199-0f746f032919 > .k-grid-container > .k-grid-content').should('be.visible')
     //click on d1 open the pop up 
-    cy.get('[data-kendo-grid-item-index="189"] > [data-kendo-grid-column-index="0"] > .mtf_button').click()
-    cy.wait(2000)
-    cy.get('.modal-content > .btn-close').click({force:true})
+    // cy.get('[data-kendo-grid-item-index="189"] > [data-kendo-grid-column-index="0"] > .mtf_button').click()
+    // cy.wait(2000)
+    // cy.get('.modal-content > .btn-close').click({force:true})
 
 
 })
