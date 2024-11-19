@@ -45,8 +45,7 @@ Cypress.Commands.add('Login', (Username,password) => {
          // click on Reports
     cy.wait(4000)
     cy.get('#ReportDropdown').click({ force: true })
-    cy.get('[href="#/ledger"]').click()
-
+  
 })
 Cypress.Commands.add('Login1', (Username,password) => {
       
@@ -67,7 +66,7 @@ Cypress.Commands.add('Login1', (Username,password) => {
       // click on Reports
      cy.wait(4000)
      cy.get('#ReportDropdown').click({ force: true })
-     cy.get('[href="#/ledger"]').click()
+  
 
 })
 
