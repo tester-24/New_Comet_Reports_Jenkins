@@ -4,7 +4,8 @@ module.exports = defineConfig({
   video: true,
   reporter: 'cypress-mochawesome-reporter', // for html reports 
   //projectId: "b6bh2b",
-   projectId: "m4t5cs",
+  // projectId: "m4t5cs",
+   projectId: "wyjfj2",
   reporterOptions: {
    
     charts: true,
