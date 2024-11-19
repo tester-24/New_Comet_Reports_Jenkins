@@ -20,8 +20,11 @@ it.only('Comet_Jainam', () => {
 
     //click on profile
     cy.wait(5000)
-    cy.get('.user > [_ngcontent-ng-c2278619692=""] > #navbarDropdown').should('be.visible')
-    cy.get('.user > [_ngcontent-ng-c2278619692=""] > #navbarDropdown').click()
+   // cy.get('.user > [_ngcontent-ng-c2278619692=""] > #navbarDropdown').should('be.visible')
+    //cy.get('.user > [_ngcontent-ng-c2278619692=""] > #navbarDropdown').click()
+     cy.get('.user-icon').should('be.visible')
+    cy.get('.user-icon').click({force:true})
+
 
     //click on my details
     cy.wait(1000)
