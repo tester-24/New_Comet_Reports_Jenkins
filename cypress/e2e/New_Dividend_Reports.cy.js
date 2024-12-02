@@ -30,7 +30,7 @@ describe('New_Dividend_Reports ',() =>
           // Download Pdf File
           cy.wait(3000)
           cy.get('[src="../../../../assets/image/icon/pdf.png"]').should('be.visible')
-          cy.get('[src="../../../../assets/image/icon/pdf.png"]').click()
+          cy.get('[src="../../../../assets/image/icon/pdf.png"]').click({force:true})
 
     }
     else
