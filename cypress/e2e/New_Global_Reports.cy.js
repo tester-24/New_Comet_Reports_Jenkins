@@ -59,7 +59,7 @@ describe('New_Global_Reports ',() =>
 
        // click on download by dropdown
     cy.wait(3000)
-    cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[2]/div/kendo-dropdownlist/button').click()
+    cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[2]/div/kendo-dropdownlist/button').click({force:true})
     
     //2.  select type Date wise
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]/span[1]').should('be.visible')
@@ -145,7 +145,7 @@ it('New_Global_Report_Segment_Derivative', () => {
        //Click on download button
        cy.wait(1000)
        cy.get('.col-lg-2 > .btn').should('be.visible')
-       cy.get('.col-lg-2 > .btn').click()
+       cy.get('.col-lg-2 > .btn').click({force:true})
        cy.scrollTo('top')
   
          // click on download by dropdown
