@@ -54,7 +54,7 @@ describe('New_Global_Reports ',() =>
      //Click on download button
      cy.wait(1000)
      cy.get('.col-lg-2 > .btn').should('be.visible')
-     cy.get('.col-lg-2 > .btn').click()
+     cy.get('.col-lg-2 > .btn').click({force:true})
      cy.scrollTo('top')
 
        // click on download by dropdown
