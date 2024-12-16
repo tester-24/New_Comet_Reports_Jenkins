@@ -44,6 +44,7 @@ it.only('Comet_Jainam', () => {
 
    //assertion for bank details
    cy.scrollTo(0,300)
+   cy.wait(1000)
    cy.get('#BankIndicators > .carousel-inner > .active').should('be.visible')
   
    // //assertion for dp details
