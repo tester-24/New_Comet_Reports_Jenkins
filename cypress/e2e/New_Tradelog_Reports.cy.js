@@ -5,9 +5,10 @@
 
 describe('New_Tradelog_ReportS ',() =>
   {
-it.only('New_Tradelog_Reports_FY_2023-2024', () => 
+it('New_Tradelog_Reports_FY_2023-2024', () => 
    {
-    cy.Login1();    
+    cy.visit('https://comet.jainam.in/#/startup')
+    cy.Login2();    
     //Select Tradelog
     cy.wait(500)
     cy.get('[href="#/tradelog"]').click({force:true})
@@ -25,12 +26,19 @@ it.only('New_Tradelog_Reports_FY_2023-2024', () =>
      cy.get('.btn').should('be.visible')
      cy.get('.btn').click()
      cy.wait(3000)
-
+      // logout flow
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(500)
+      // click on logout 
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 
 })
 
-it.only('New_Tradelog_Reports_FY_2024-2025', () => {
-  cy.Login1();
+it('New_Tradelog_Reports_FY_2024-2025', () => {
+  cy.Login2();
   //Select Tradelog
   cy.wait(500)
   cy.get('[href="#/tradelog"]').click({force:true})
@@ -46,7 +54,14 @@ it.only('New_Tradelog_Reports_FY_2024-2025', () => {
   cy.get('.btn').should('be.visible')
   cy.get('.btn').click()
   cy.wait(3000)
-   
+   // logout flow
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(500)
+      // click on logout 
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
  
 })
 
