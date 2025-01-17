@@ -46,7 +46,7 @@ describe('New_Global_Reports ',() =>
     //click on dropdown for selcting excel type
     cy.scrollTo('top')
     cy.wait(6000)
-    cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[5]/div/kendo-dropdownlist/button').click()
+    cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[5]/div/kendo-dropdownlist/button').click({force:true})
     cy.scrollTo('top')
     //Select Excel type
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').should('be.visible')
@@ -150,7 +150,7 @@ it('New_Global_Report_Segment_Derivative', () => {
       //Select Excel type
       cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').should('be.visible')
       cy.wait(1000)
-      cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click()
+      cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click(.click({force:true}))
       cy.scrollTo('top')
        //Click on download button
        cy.wait(1000)
