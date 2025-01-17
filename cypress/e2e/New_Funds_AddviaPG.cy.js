@@ -2,24 +2,54 @@
 /// <reference types="cypress-iframe" /> 
 
 import 'cypress-iframe';
-import { LoginPage } from "./comet_login.cy.js"
-const lp = new LoginPage
+//import { LoginPage } from "./comet_login.cy.js"
+//const lp = new LoginPage
 
-it.only('Comet_Jainam', () => {
-    cy.visit('https://comet.jainam.in/#/startup')
-    cy.wait(3000)
+it('Comet_Jainam', () => {
+  cy.visit('https://comet.jainam.in/#/startup')
     cy.get('.login-space-btn').click({force:true})
     //Login Flow
     cy.wait(1000)
-    cy.get('.userid_wrap > .input_wrap > .text_form').type('wa5320')
-    cy.get('#LoginPassword').type('Neel@123')
-    cy.xpath("//p[normalize-space()='Login Now']").click({ force: true });
-    // pin page
-    cy.wait(2000);
-    cy.get('[formcontrolname="otp1"]').type('1');
-    cy.get('[formcontrolname="otp2"]').type('2');
-    cy.get('[formcontrolname="otp3"]').type('3');
-    cy.get('[formcontrolname="otp4"]').type('4');
+  
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('wa5320')
+    
+    //click on continue button
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/button[1]').click()
+    
+    // enter password
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/div/div/div/kendo-textbox/input').type('Jainam@12345')
+    
+    //click on continue button
+    cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
+    
+    // enter the pin 
+    cy.get('#pin1').type(1)
+    cy.get('#pin2').type(2)
+    cy.get('#pin3').type(3)
+    cy.get('#pin4').type(4)
+    cy.wait(5000)
+    
+   //click on corporate action on dashboard 
+   cy.wait(3000)
+   // cy.get('.payin-btn > .ng-star-inserted').invoke("removeAttr", "target").click()
+    cy.window().then((win) => {
+        cy.stub(win, 'open').callsFake((url) => {
+          win.location.href = url;
+        });
+      });
+      cy.wait(2000)
+      cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+     
+      
+      // Verify that the page or URL is updated
+      cy.wait(4000)
+      cy.url().should('include', 'https://comet.jainam.in/#/corporate-actions');
+      Cypress.on('uncaught:exception', (err) => {
+        // returning false here prevents Cypress from
+        // failing the test
+        console.log('Cypress detected uncaught exception: ', err);
+        return false;
+      });
    // click on funds
    cy.get(':nth-child(3) > .nav-link').click()
    //click on add vai PG
@@ -32,7 +62,7 @@ it.only('Comet_Jainam', () => {
       });
       cy.wait(2000)
       cy.get('.payin-btn > .ng-star-inserted').click()
-      
+     // cy.xpath('/html/body/app-root/app-layout/div/app-funds/div[1]/div/div/div/div[1]/div/div[3]/button[1]').click({force:true})
       // Verify that the page or URL is updated
       cy.wait(4000)
       cy.url().should('include', 'https://cash.jainam.in/Payment/MakePayment');
@@ -68,6 +98,17 @@ it.only('Comet_Jainam', () => {
    //cy.wait(5000)
    cy.get('body').should('be.visible')
    cy.wait(2000)
+
+   // back to https://uatcomet.jainam.in/#/funds
+   cy.visit('https://comet.jainam.in/#/funds')
+   // logout flow
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1500)
+      // click on logout 
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 //    cy.frameLoaded("razorpay-checkout-frame")
 //    cy.wait(1000)
 //    cy.iframe('razorpay-checkout-frame').find('/html/body/div[1]/div[1]/div[2]/div[2]/div/div/div/div/div[2]/div/div/div[2]/div[2]/div/div/form/div/div/button')
