@@ -5,7 +5,7 @@
 describe('New_TaxP&L_ReportS ',() =>
   {
     it('New_TaxP&L_Segment_Equity', () => {
-      
+      cy.visit('https://comet.jainam.in/#/startup')
       cy.Login();
     //Click on tax p&l
     cy.wait(2000)
@@ -52,9 +52,18 @@ describe('New_TaxP&L_ReportS ',() =>
    cy.get(':nth-child(5) > .download-summary-btn').should('be.visible')
    cy.get(':nth-child(5) > .download-summary-btn').click({force:true})
    cy.scrollTo('top')
+
+    // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
+
 })
 it('New_TaxP&L_Segment_NSE_FNO', () => {
-  cy.visit('https://comet.jainam.in/#/startup')
+ // cy.visit('https://comet.jainam.in/#/startup')
   cy.Login()
   //Click on tax p&l
   cy.wait(1000)
@@ -83,6 +92,14 @@ it('New_TaxP&L_Segment_NSE_FNO', () => {
   cy.scrollTo(300,300)
   //Click on Download button
   cy.scrollTo('top')
+
+  // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 
   })
   })
