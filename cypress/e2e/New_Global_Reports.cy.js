@@ -150,7 +150,7 @@ it('New_Global_Report_Segment_Derivative', () => {
       //Select Excel type
       cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').should('be.visible')
       cy.wait(1000)
-      cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click(.click({force:true}))
+      cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click({force:true})
       cy.scrollTo('top')
        //Click on download button
        cy.wait(1000)
