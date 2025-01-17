@@ -102,6 +102,7 @@ it('Comet_Jainam', () => {
    // back to https://uatcomet.jainam.in/#/funds
    cy.visit('https://comet.jainam.in/#/funds')
    // logout flow
+      cy.wait(1500)
       // click on user profile 
       cy.get('.user-icon').click({force:true})
       cy.wait(1500)
