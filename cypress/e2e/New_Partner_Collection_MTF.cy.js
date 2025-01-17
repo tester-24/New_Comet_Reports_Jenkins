@@ -1,23 +1,11 @@
 /// <reference types="cypress"/>
 
-import { LoginPage } from "./comet_login.cy.js"
-const lp = new LoginPage
+//import { LoginPage } from "./comet_login.cy.js"
+//const lp = new LoginPage
 
-it.only('Comet_Jainam', () => {
-    cy.visit('https://comet.jainam.in/#/startup')
-    cy.wait(3000)
-    cy.get('.login-space-btn').click({force:true})
-    //Login Flow
-    cy.wait(1000)
-    lp.enterUsername()
-    lp.enterPassword()
-    lp.clickLogin()
-    cy.wait(2000);
-    cy.get('[formcontrolname="otp1"]').type('1');
-    cy.get('[formcontrolname="otp2"]').type('2');
-    cy.get('[formcontrolname="otp3"]').type('3');
-    cy.get('[formcontrolname="otp4"]').type('4');
-   
+it('Comet_Jainam', () => {
+  cy.visit('https://comet.jainam.in/#/startup')
+  cy.Login();
     // click on partners 
     cy.wait(6000)
     cy.get('#PartnerDropdown').click({ force: true })
@@ -43,11 +31,65 @@ it.only('Comet_Jainam', () => {
     // verify data shown 
     cy.wait(15000)
     cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid').should('be.visible')
+    cy.wait(2000)
+  //   cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td/button')
+  // .then(($button) => {
+  //   if ($button.length > 0 && $button.is(':visible')) {
+  //     // Button is found and visible, perform the action
+  //     cy.wrap($button).click();
+  //   } else {
+  //     // Button not found or not visible
+  //     cy.log('Button not found');
+  //   }
+      // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
+
+ // });
+
     //cy.get('#k-97d10905-3611-4949-b199-0f746f032919 > .k-grid-container > .k-grid-content').should('be.visible')
-    //click on d1 open the pop up 
-    // cy.get('[data-kendo-grid-item-index="189"] > [data-kendo-grid-column-index="0"] > .mtf_button').click()
-    // cy.wait(2000)
-    // cy.get('.modal-content > .btn-close').click({force:true})
-
-
-})
+    ///html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[1]/td[1]/button
+    ///html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[401]/td[1]/button
+    //click on d1 open the pop up
+   // cy.wait(2000)
+//     if(cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[10]/td[1]/button').parent().should('not.be.visible'))
+//       {
+//             cy.log('D1 not found')
+//       //     cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[10]/td[1]/button').click()
+//       //     cy.wait(2000)
+//       //     cy.get('.modal-content > .btn-close').click({force:true})
+//       }
+//       else
+//        {
+//         // cy.log('D1 not found')
+//         cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[10]/td[1]/button').click()
+//         //cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr[10]/td[1]/button').click()
+//            cy.wait(2000)
+//          cy.get('.modal-content > .btn-close').click({force:true})
+//       }
+// Check if any button inside the table is visible
+// cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid').within(() => 
+//       {
+            cy.wait(2000)
+        //     cy.get('button').then((buttons) => {
+        // // Filter for visible buttons
+        // const visibleButtons = Cypress.$(buttons).filter(':visible');
+    
+        // if (visibleButtons.length > 0) 
+        //     {
+        //   cy.log('A visible button is found');
+        //   cy.get('button').first().click({force:true})
+        //   cy.wait(2000)
+        //   cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[3]/div/div/button').click({force:true})
+        //   // Perform additional actions on the visible button(s) if needed
+        // } 
+        // else {
+        //      cy.log('No visible buttons found');
+        //     }
+        });
+      
+  
