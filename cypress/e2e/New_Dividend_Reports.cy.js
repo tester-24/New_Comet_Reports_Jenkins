@@ -5,10 +5,14 @@
 describe('New_Dividend_Reports ',() =>
   {
     it('New_Dividend_Reports_FY_2023-2024', () => {
-    cy.Login1()
+      cy.visit('https://comet.jainam.in/#/startup')
+    cy.Login2()
     //Select Dividend Report
     cy.wait(500)
-    cy.get('[href="#/dividend-report"]').click({force:true})
+    //click on divident report
+    cy.get('[href="#/dividend-report"]').click()
+    //cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[2]/div/a[9]').click()
+    // cy.get('[href="#/dividend-report"]').click({force:true})
     cy.wait(1000)
     cy.scrollTo('top')
     //Click on Year Dropdown
@@ -30,20 +34,31 @@ describe('New_Dividend_Reports ',() =>
           // Download Pdf File
           cy.wait(3000)
           cy.get('[src="../../../../assets/image/icon/pdf.png"]').should('be.visible')
-          cy.get('[src="../../../../assets/image/icon/pdf.png"]').click({force:true})
+          cy.get('[src="../../../../assets/image/icon/pdf.png"]').click()
 
     }
     else
     {
       cy.log('Data not found')
     }
+     cy.wait(1500)
+    // logout flow
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(500)
+      // click on logout 
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 
   })
   it('New_Dividend_Reports_FY_2024-2025', () => {
-     cy.Login1();
-    //Select Dividend Report
-   cy.wait(500)
-    cy.get('[href="#/dividend-report"]').click({force:true})
+    cy.visit('https://comet.jainam.in/#/startup')
+     cy.Login2();
+     cy.wait(500)
+     //click on divident report
+     cy.get('[href="#/dividend-report"]').click()
+     //cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[2]/div/a[9]').click()
     cy.wait(1000)
     cy.scrollTo('top')
     //Click on Year Dropdown
@@ -75,5 +90,14 @@ describe('New_Dividend_Reports ',() =>
     {
       cy.log('Data not found')
     }
+    cy.wait(1500)
+    // logout flow
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(500)
+      // click on logout 
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 })
   })
