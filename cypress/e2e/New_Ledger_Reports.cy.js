@@ -114,7 +114,7 @@ it('New_Ledger_Report_Segment_All', () => {
 })
 
 it('New_Ledger_Report_Segment_Equity', () => {
-  cy.visit('https://uatcomet.jainam.in/#/startup')
+  cy.visit('https://comet.jainam.in/#/startup')
   cy.Login(); 
     //click on ledger
     cy.get('[href="#/ledger"]').click()  
@@ -223,7 +223,7 @@ it('New_Ledger_Report_Segment_Equity', () => {
      
  });
  it('New_Ledger_Report_Segment_FutureOption', () => {
-  cy.visit('https://uatcomet.jainam.in/#/startup')
+  cy.visit('https://comet.jainam.in/#/startup')
  cy.Login()
    //click on ledger
    cy.get('[href="#/ledger"]').click()
