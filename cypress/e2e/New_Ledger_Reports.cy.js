@@ -5,8 +5,10 @@
 describe('New_Ledger_Report ',() =>
 {
 it('New_Ledger_Report_Segment_All', () => {
+  cy.visit('https://comet.jainam.in/#/startup')
      cy.Login();
-      cy.get('[href="#/ledger"]').click()
+    //click on ledger
+    cy.get('[href="#/ledger"]').click()
    // 1)Click on dropdown all
    cy.wait(2000)
    cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
@@ -99,13 +101,23 @@ it('New_Ledger_Report_Segment_All', () => {
        {
          cy.log('No data found')
        }
+
+       // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
+
      
 })
 
 it('New_Ledger_Report_Segment_Equity', () => {
-  cy.visit('https://comet.jainam.in/#/startup')
+  cy.visit('https://uatcomet.jainam.in/#/startup')
   cy.Login(); 
-       cy.get('[href="#/ledger"]').click()
+    //click on ledger
+    cy.get('[href="#/ledger"]').click()  
    // 1)Click on dropdown all
    cy.wait(5000)
    cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
@@ -168,7 +180,7 @@ it('New_Ledger_Report_Segment_Equity', () => {
        cy.wait(5000)
        
        //Click on Contract/Bills
-       cy.wait(5000)
+      // cy.wait(3000)
        cy.get('#bills').should('be.visible')
        cy.get('#bills').click({force:true})
        
@@ -199,12 +211,22 @@ it('New_Ledger_Report_Segment_Equity', () => {
        {
          cy.log('No data found')
        }
+
+       // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
+
      
  });
  it('New_Ledger_Report_Segment_FutureOption', () => {
-  cy.visit('https://comet.jainam.in/#/startup')
+  cy.visit('https://uatcomet.jainam.in/#/startup')
  cy.Login()
-cy.get('[href="#/ledger"]').click()
+   //click on ledger
+   cy.get('[href="#/ledger"]').click()
  // 1)Click on dropdown all
  cy.wait(2000)
  cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
@@ -303,6 +325,13 @@ cy.wait(15000)
     cy.scrollTo('top')
 
      }
+      // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 
 });
 })
