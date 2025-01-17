@@ -4,7 +4,8 @@
 //const loginPage = new LoginPage
 describe('New_Portfolio_Reports ',() =>
   {
-    it.only('New_Portfolio_Report_Myholding', () => {
+    it('New_Portfolio_Report_Myholding', () => {
+    cy.visit('https://comet.jainam.in/#/startup')
     cy.Login();
     //Click on Portfolio
     
@@ -14,8 +15,8 @@ describe('New_Portfolio_Reports ',() =>
     cy.wait(3000)
     cy.xpath('/html/body/app-root/app-layout/div/app-portfolio/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').click()
     //select my holding
-    cy.wait(1500)
-    cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[1]/span[1]').click({force:true})
+    cy.wait(1000)
+    cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[1]/span[1]').click()
     //Enter Code
     cy.get('.segment2_Text > .w-100').type('wa5320')
     //click on submit button
@@ -38,13 +39,22 @@ describe('New_Portfolio_Reports ',() =>
     cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > :nth-child(1)').click()
     //Click on close button 
    cy.wait(4000)
-   cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > [data-bs-dismiss="modal"]').click()
+   cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > [data-bs-dismiss="modal"]').click({force:true})
    }
    else{
     cy.log('Data not found')
    }
-  })
-  it.only('New_Portfolio_Report_MyPosition', () => {
+      // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
+
+    })
+  
+  it('New_Portfolio_Report_MyPosition', () => {
     cy.visit('https://comet.jainam.in/#/startup')
     cy.Login()
     //Click on Portfolio
@@ -86,6 +96,13 @@ describe('New_Portfolio_Reports ',() =>
    cy.wait(2000)
    cy.get('#DownloadModal > .modal-dialog > .modal-content > .modal-footer > [data-bs-dismiss="modal"]').click()
 }
+  // logout
+      // click on user profile 
+      cy.get('.user-icon').click({force:true})
+      cy.wait(1000)
+     cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
+      // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+      cy.wait(1000)
 
 })
   })
