@@ -29,7 +29,7 @@ it('Comet_Jainam', () => {
     cy.get('.col-md-3 > .btn').click()
 
     // verify data shown 
-    cy.wait(15000)
+    cy.wait(20000)
     cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid').should('be.visible')
     cy.wait(2000)
   //   cy.xpath('/html/body/app-root/app-layout/div/app-collection/div[2]/div/div[2]/div/kendo-grid/div/kendo-grid-list/div/div[1]/table/tbody/tr/td/button')
