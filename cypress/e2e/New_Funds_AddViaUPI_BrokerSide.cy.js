@@ -4,7 +4,8 @@
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
 describe('New_Funds_AddViaUPI_Broker ',() =>
-it('Comet_Jainam', () => {
+  {
+     it('Comet_Jainam', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.get('.login-space-btn').click({force:true})
   //Login Flow
