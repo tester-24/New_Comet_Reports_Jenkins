@@ -4,7 +4,7 @@
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
 
-it('Comet_Jainam', () => {
+it(' New_Funds_Withdrawal_BrokerSide', () => {
   cy.viewport(1500, 1000);
 
   cy.visit('https://comet.jainam.in/#/startup')
