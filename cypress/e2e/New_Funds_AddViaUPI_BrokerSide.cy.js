@@ -3,7 +3,7 @@
 
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
-
+describe('New_Funds_AddViaUPI_Broker ',() =>
 it('Comet_Jainam', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.get('.login-space-btn').click({force:true})
@@ -102,6 +102,6 @@ it('Comet_Jainam', () => {
     // cy.frameLoaded('_hjSafeContext_61597009')
    //  cy.iframe().xpath('/html/body/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]').click()
     
-
+})
     
 })
