@@ -4,7 +4,7 @@
 //const lp= new LoginPage 
 
 
-it('Comet_Jainam', () => {
+it('New_MyProfile', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.wait(1000)
   cy.get('.login-space-btn').click({force:true})
