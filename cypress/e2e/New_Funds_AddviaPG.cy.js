@@ -5,7 +5,7 @@ import 'cypress-iframe';
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
 
-it('Comet_Jainam', () => {
+it('New_Funds_AddViaPG', () => {
   cy.visit('https://comet.jainam.in/#/startup')
     cy.get('.login-space-btn').click({force:true})
     //Login Flow
