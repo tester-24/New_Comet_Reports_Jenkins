@@ -74,13 +74,13 @@ it(' New_Funds_Withdrawal_BrokerSide', () => {
        cy.wait(2000)
        cy.get('.ng-trigger').should('be.visible')
 
-       // //delete request
-       // cy.get('[data-kendo-grid-item-index="1"] > [data-kendo-grid-column-index="0"] > .icon-button > img').click()
-       // //click on delete option
-       // cy.get('.k-actions > .btn-primary').click()
-       // //requst wa sdelete sucessufully
-       // cy.wait(1000)
-       // cy.get('.ng-trigger').should('be.visible')
+       //delete request
+       cy.get('[data-kendo-grid-item-index="1"] > [data-kendo-grid-column-index="0"] > .icon-button > img').click()
+       //click on delete option
+       cy.get('.k-actions > .btn-primary').click()
+       //requst wa sdelete sucessufully
+       cy.wait(1000)
+       cy.get('.ng-trigger').should('be.visible')
     }
     else{
       // //if data is there it cheks 
@@ -98,13 +98,13 @@ it(' New_Funds_Withdrawal_BrokerSide', () => {
       //   cy.wait(2000)
       //   cy.get('.ng-trigger').should('be.visible')
 
-        //delete request
-        cy.get('[data-kendo-grid-item-index="1"] > [data-kendo-grid-column-index="0"] > .icon-button > img').click()
-        //click on delete option
-        cy.get('.k-actions > .btn-primary').click()
-        //requst wa sdelete sucessufully
-        cy.wait(1000)
-        cy.get('.ng-trigger').should('be.visible')
+        // //delete request
+        // cy.get('[data-kendo-grid-item-index="1"] > [data-kendo-grid-column-index="0"] > .icon-button > img').click()
+        // //click on delete option
+        // cy.get('.k-actions > .btn-primary').click()
+        // //requst wa sdelete sucessufully
+        // cy.wait(1000)
+        // cy.get('.ng-trigger').should('be.visible')
       cy.log('Data not found')
  }
 
