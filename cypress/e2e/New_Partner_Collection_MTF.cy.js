@@ -3,7 +3,7 @@
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
 
-it('Comet_Jainam', () => {
+it('New_ Partner_ Collection_ MTF', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.Login();
     // click on partners 
