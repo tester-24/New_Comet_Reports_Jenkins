@@ -3,7 +3,7 @@
 //import { should } from "chai";
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
-
+describe("New_Funds_Withdrawal_BrokerSide", () => {
 it(' New_Funds_Withdrawal_BrokerSide', () => {
   cy.viewport(1500, 1000);
 
@@ -115,5 +115,5 @@ it(' New_Funds_Withdrawal_BrokerSide', () => {
      cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
       // cy.get('.mt-4 > :nth-child(4)').click({force:true})
       cy.wait(1000)
-    
+})   
 })
