@@ -4,7 +4,8 @@
 import 'cypress-iframe';
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
-
+describe('New_Funds_AddViaPG ',() =>
+  {
 it('New_Funds_AddViaPG', () => {
   cy.visit('https://comet.jainam.in/#/startup')
     cy.get('.login-space-btn').click({force:true})
@@ -137,3 +138,4 @@ it('New_Funds_AddViaPG', () => {
   // Assuming the iFrame has an ID of 'myIframe' and the button has a class of 'verify-and-pay'
 
 })
+  })
