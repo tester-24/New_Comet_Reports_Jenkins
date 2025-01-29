@@ -3,7 +3,7 @@
 //import { LoginPage } from "./login_1.cy";
 //const lp= new LoginPage 
 
-
+describe("New_MyProfile", () => {
 it('New_MyProfile', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.wait(1000)
@@ -90,4 +90,5 @@ it('New_MyProfile', () => {
      cy.xpath('/html/body/app-layout/app-header/header/div/nav/ul/li[4]/div/div/div/div[2]/ul/li[5]/a').click({force:true})
       // cy.get('.mt-4 > :nth-child(4)').click({force:true})
       cy.wait(1000)
+})
 })
