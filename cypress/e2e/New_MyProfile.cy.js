@@ -3,8 +3,9 @@
 //import { LoginPage } from "./login_1.cy";
 //const lp= new LoginPage 
 
-describe("New_MyProfile", () => {
-it('New_MyProfile', () => {
+describe('My Profile ',() =>
+  {
+it('Comet_Jainam', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.wait(1000)
   cy.get('.login-space-btn').click({force:true})
@@ -27,34 +28,19 @@ it('New_MyProfile', () => {
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
   cy.wait(5000)
-  // cy.get('.payin-btn > .ng-star-inserted').invoke("removeAttr", "target").click()
-   cy.window().then((win) => {
-       cy.stub(win, 'open').callsFake((url) => {
-         win.location.href = url;
-       });
-     });
-     cy.wait(2000)
-     cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
-     
-     // Verify that the page or URL is updated
-     cy.wait(4000)
-     cy.url().should('include', 'https://comet.jainam.in/#/corporate-actions');
-     Cypress.on('uncaught:exception', (err) => {
-       // returning false here prevents Cypress from
-       // failing the test
-       console.log('Cypress detected uncaught exception: ', err);
-       return false;
-     });
-    //click on profile
-    cy.wait(5000)
-    cy.get('.user-icon').should('be.visible')
-    cy.get('.user-icon').click({force:true})
+  cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").click({force:true})
+    // cy.wait(500)
+      cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").should('be.visible')
+      cy.wait(500)
+      cy.window().then((win) => {
+             cy.stub(win, 'open').callsFake((url) => {
+               win.location.href = url;
+             });
+           });
+           cy.wait(2000)
+        //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+      cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/div[1]/ul[1]/li[1]/a[1]").click({force:true})
 
-    //click on my details
-    cy.wait(2000)
-    cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
-   
-    // assertion for label
     cy.get('.row > .col-md-7').should('be.visible')
    
     //Assertion for image
@@ -91,4 +77,4 @@ it('New_MyProfile', () => {
       // cy.get('.mt-4 > :nth-child(4)').click({force:true})
       cy.wait(1000)
 })
-})
+  })
