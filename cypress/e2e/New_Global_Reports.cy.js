@@ -7,18 +7,29 @@ describe('New_Global_Reports ',() =>
     it('New_Global_Report_Segment_Equity', () => {
       cy.visit('https://comet.jainam.in/#/startup')
      cy.Login2();
-     cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
-     // cy.wait(500)
-      cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
-      cy.wait(500)
-      cy.window().then((win) => {
-             cy.stub(win, 'open').callsFake((url) => {
-               win.location.href = url;
-             });
-           });
-           cy.wait(2000)
-        //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
-      cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[3]/a[1]').click({force:true})
+     // after entering pin this redirects to direct comet dashboard 
+
+      // click on Reports
+      cy.wait(1000)
+     cy.get('#ReportDropdown').click({ force: true })
+     // select Global Report
+     cy.get('[href="#/pnl"]').click({force:true})
+     
+     
+  // this is old flow its go from client dashboard in to comet
+
+    //  cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
+    //  // cy.wait(500)
+    //   cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
+    //   cy.wait(500)
+    //   cy.window().then((win) => {
+    //          cy.stub(win, 'open').callsFake((url) => {
+    //            win.location.href = url;
+    //          });
+    //        });
+    //        cy.wait(2000)
+    //     //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+    //   cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[3]/a[1]').click({force:true})
 
      //select global reports options
     //cy.wait(2000)
@@ -57,7 +68,7 @@ describe('New_Global_Reports ',() =>
     //click on dropdown for selcting excel type
     cy.scrollTo('top')
     cy.wait(6000)
-    cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[5]/div/kendo-dropdownlist/button').click({force:true})
+    cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[5]/div/kendo-dropdownlist/button').click()
     cy.scrollTo('top')
     //Select Excel type
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').should('be.visible')
@@ -119,19 +130,26 @@ describe('New_Global_Reports ',() =>
 it('New_Global_Report_Segment_Derivative', () => {
      cy.visit('https://comet.jainam.in/#/startup')
       cy.Login2();
+ // click on Reports
+ cy.wait(1000)
+ cy.get('#ReportDropdown').click({ force: true })
+ // select Global Report
+ cy.get('[href="#/pnl"]').click({force:true})
+ 
+   // this is old flow its go from client dashboard in to comet
       //select global reports options
-      cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
-     // cy.wait(500)
-      cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
-      cy.wait(500)
-      cy.window().then((win) => {
-             cy.stub(win, 'open').callsFake((url) => {
-               win.location.href = url;
-             });
-           });
-           cy.wait(2000)
-        //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
-      cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[3]/a[1]').click({force:true})
+    //   cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
+    //  // cy.wait(500)
+    //   cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
+    //   cy.wait(500)
+    //   cy.window().then((win) => {
+    //          cy.stub(win, 'open').callsFake((url) => {
+    //            win.location.href = url;
+    //          });
+    //        });
+    //        cy.wait(2000)
+    //     //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+    //   cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[3]/a[1]').click({force:true})
       cy.scrollTo('top')
       cy.xpath('/html/body/app-root/app-layout/div/app-pnl/div[1]/div/form/div[2]/div[1]/div/kendo-dropdownlist/button').click()
       
@@ -168,7 +186,7 @@ it('New_Global_Report_Segment_Derivative', () => {
       //Select Excel type
       cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').should('be.visible')
       cy.wait(1000)
-      cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click({force:true})
+      cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]').click()
       cy.scrollTo('top')
        //Click on download button
        cy.wait(1000)
