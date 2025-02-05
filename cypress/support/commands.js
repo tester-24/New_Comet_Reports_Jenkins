@@ -107,7 +107,7 @@ Cypress.Commands.add('Login2', (Username,password) => {
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(5000)
+  cy.wait(3000)
   // cy.get('.payin-btn > .ng-star-inserted').invoke("removeAttr", "target").click()
   //  cy.window().then((win) => {
   //      cy.stub(win, 'open').callsFake((url) => {
