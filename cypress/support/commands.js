@@ -90,7 +90,7 @@ Cypress.Commands.add('Login2', (Username,password) => {
   cy.wait(1000)
   cy.get('.login-space-btn').click({force:true})
   //Enter the userid
-  cy.wait(1000)
+  cy.wait(3000)
   cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('M3903')
   
   //click on continue button
