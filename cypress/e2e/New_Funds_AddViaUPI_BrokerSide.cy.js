@@ -5,7 +5,7 @@
 //const lp = new LoginPage
 describe('New_Funds_AddViaUPI_Broker ',() =>
   {
-     it('Comet_Jainam', () => {
+    it('Comet_Jainam', () => {
   cy.visit('https://comet.jainam.in/#/startup')
   cy.get('.login-space-btn').click({force:true})
   //Login Flow
@@ -27,11 +27,11 @@ describe('New_Funds_AddViaUPI_Broker ',() =>
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(5000)
+  cy.wait(3000)
    //click on comet icon
-   cy.wait(500) 
-   cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-   .click({timeout:3000});  
+  //  cy.wait(500) 
+  //  cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+  //  .click({timeout:3000});  
    
    // click on funds
    cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[3]/a').click({ force: true })
@@ -103,6 +103,7 @@ describe('New_Funds_AddViaUPI_Broker ',() =>
     // cy.frameLoaded('_hjSafeContext_61597009')
    //  cy.iframe().xpath('/html/body/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]').click()
     
-})
+
     
+})
 })
