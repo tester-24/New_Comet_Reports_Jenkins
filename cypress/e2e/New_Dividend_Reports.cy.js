@@ -7,20 +7,28 @@ describe('New_Dividend_Reports ',() =>
     it('New_Dividend_Reports_FY_2023-2024', () => {
     cy.visit('https://comet.jainam.in/#/startup')
     cy.Login2()
+     // click on Reports
+  cy.wait(1000)
+  cy.get('#ReportDropdown').click({ force: true })
+  // select Divident report
+  cy.get('[href="#/dividend-report"]').click({force:true})
+
+
+       // old flow it will first go on dashboard and from there it will click on reports icon   
     //Select Dividend Report
     //cy.wait(5000)
-    cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
-   // cy.wait(500)
-    cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
-    cy.wait(500)
-    cy.window().then((win) => {
-           cy.stub(win, 'open').callsFake((url) => {
-             win.location.href = url;
-           });
-         });
-         cy.wait(2000)
-      //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
-    cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[4]/a[1]').click({force:true})
+  //   cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
+  //  // cy.wait(500)
+  //   cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
+  //   cy.wait(500)
+  //   cy.window().then((win) => {
+  //          cy.stub(win, 'open').callsFake((url) => {
+  //            win.location.href = url;
+  //          });
+  //        });
+  //        cy.wait(2000)
+  //     //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+  //   cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[4]/a[1]').click({force:true})
     //click on divident report
    // cy.get('[href="#/dividend-report"]').click()
     //cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[2]/div/a[9]').click()
@@ -67,19 +75,28 @@ describe('New_Dividend_Reports ',() =>
   it('New_Dividend_Reports_FY_2024-2025', () => {
     cy.visit('https://comet.jainam.in/#/startup')
      cy.Login2();
-    //cy.wait(5000)
-     cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
-    // cy.wait(500)
-     cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
-     cy.wait(500)
-     cy.window().then((win) => {
-            cy.stub(win, 'open').callsFake((url) => {
-              win.location.href = url;
-            });
-          });
-          cy.wait(2000)
-       //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
-     cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[4]/a[1]').click({force:true})
+        // click on Reports
+  cy.wait(1000)
+  cy.get('#ReportDropdown').click({ force: true })
+  // select Divident report
+  cy.get('[href="#/dividend-report"]').click({force:true})
+
+
+
+   //  // old flow it will first go on dashboard and from there it will click on reports icon   
+     //cy.wait(5000)
+    //  cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").click({force:true})
+    // // cy.wait(500)
+    //  cy.xpath("//a[@class='nav_title text_decoration_none d_inline_block']//img[@alt='reports']").should('be.visible')
+    //  cy.wait(500)
+    //  cy.window().then((win) => {
+    //         cy.stub(win, 'open').callsFake((url) => {
+    //           win.location.href = url;
+    //         });
+    //       });
+    //       cy.wait(2000)
+    //    //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+    //  cy.xpath('/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[2]/ul[1]/li[3]/div[1]/ul[1]/li[4]/a[1]').click({force:true})
     cy.scrollTo('top')
     //Click on Year Dropdown
    // cy.wait(2000)
