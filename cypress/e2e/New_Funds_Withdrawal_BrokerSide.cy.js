@@ -4,13 +4,13 @@
 //import { LoginPage } from "./comet_login.cy.js"
 //const lp = new LoginPage
 describe("New_Funds_Withdrawal_BrokerSide", () => {
-it(' New_Funds_Withdrawal_BrokerSide', () => {
+it('Comet_Jainam', () => {
   cy.viewport(1500, 1000);
 
   cy.visit('https://comet.jainam.in/#/startup')
   cy.get('.login-space-btn').click({force:true})
   //Login Flow
-  cy.wait(4000)
+  cy.wait(1000)
 
   cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
   
@@ -28,12 +28,12 @@ it(' New_Funds_Withdrawal_BrokerSide', () => {
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(5000)
+  cy.wait(3000)
    
    //click on comet icon
-   cy.wait(1500) 
-   cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-   .click({timeout:3000});  
+  //  cy.wait(500) 
+  //  cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+  //  .click({timeout:3000});  
    
 
     // click on funds
@@ -98,22 +98,24 @@ it(' New_Funds_Withdrawal_BrokerSide', () => {
       //   cy.wait(2000)
       //   cy.get('.ng-trigger').should('be.visible')
 
-        // //delete request
-        // cy.get('[data-kendo-grid-item-index="1"] > [data-kendo-grid-column-index="0"] > .icon-button > img').click()
-        // //click on delete option
-        // cy.get('.k-actions > .btn-primary').click()
-        // //requst wa sdelete sucessufully
-        // cy.wait(1000)
-        // cy.get('.ng-trigger').should('be.visible')
+      //   //delete request
+      //   cy.get('[data-kendo-grid-item-index="1"] > [data-kendo-grid-column-index="0"] > .icon-button > img').click()
+      //   //click on delete option
+      //   cy.get('.k-actions > .btn-primary').click()
+      //   //requst wa sdelete sucessufully
+      //   cy.wait(1000)
+      //   cy.get('.ng-trigger').should('be.visible')
       cy.log('Data not found')
  }
 
-  // logout   1126 live
+   // logout   1126 live
       // click on user profile 
       cy.get('.user-icon').click({force:true})
       cy.wait(1000)
      cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({force:true})
       // cy.get('.mt-4 > :nth-child(4)').click({force:true})
       cy.wait(1000)
-})   
+    
+})
+
 })
