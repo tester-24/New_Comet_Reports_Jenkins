@@ -27,19 +27,23 @@ it('Comet_Jainam', () => {
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(5000)
-  cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").click({force:true})
-    // cy.wait(500)
-      cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").should('be.visible')
-      cy.wait(500)
-      cy.window().then((win) => {
-             cy.stub(win, 'open').callsFake((url) => {
-               win.location.href = url;
-             });
-           });
-           cy.wait(2000)
-        //  cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
-      cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/div[1]/ul[1]/li[1]/a[1]").click({force:true})
+  cy.wait(3000)
+  // cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").click({force:true})
+  //   // cy.wait(500)
+  //     cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").should('be.visible')
+  //     cy.wait(500)
+  //     cy.window().then((win) => {
+  //            cy.stub(win, 'open').callsFake((url) => {
+  //              win.location.href = url;
+  //            });
+  //          });
+          // click on user iCON
+          cy.get('.user-icon').click({FORCE:true})
+          // CLICK ON MY PROFILE
+         // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+         cy.xpath("//label[normalize-space()='My Profile']").click()
+        //cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+      //cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/div[1]/ul[1]/li[1]/a[1]").click({force:true})
 
     cy.get('.row > .col-md-7').should('be.visible')
    
