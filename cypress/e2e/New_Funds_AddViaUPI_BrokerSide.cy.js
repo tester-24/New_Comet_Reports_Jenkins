@@ -9,7 +9,7 @@ describe('New_Funds_AddViaUPI_Broker ',() =>
   cy.visit('https://comet.jainam.in/#/startup')
   cy.get('.login-space-btn').click({force:true})
   //Login Flow
-  cy.wait(1000)
+  cy.wait(3000)
 
   cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
   
