@@ -30,11 +30,11 @@ Cypress.Commands.add('Login', (Username,password) => {
       
       const user = Username || Cypress.env('Username');
       const pass = password || Cypress.env('password');
-      cy.visit('https://comet.jainam.in/#/startup')
+      cy.visit('https://jplus.jainam.in/')
       cy.wait(1000)
-      cy.get('.login-space-btn').click({force:true})
+      //cy.get('.login-space-btn').click({force:true})
       //Login Flow
-      cy.wait(4000)
+     // cy.wait(4000)
     
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('1126')
       
@@ -52,13 +52,13 @@ Cypress.Commands.add('Login', (Username,password) => {
       cy.get('#pin2').type(2)
       cy.get('#pin3').type(3)
       cy.get('#pin4').type(4)
-    //   //click on comet icon
-    //  cy.wait(500) 
-    //  cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
-    //  .click({timeout:3000});     
+      //click on comet icon
+     cy.wait(3000) 
+     cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
+     .click({timeout:3000});     
       // click on Reports
-    cy.wait(4000)
-    cy.get('#ReportDropdown').click({ force: true })
+      //cy.wait(4000)
+      cy.get('#ReportDropdown').click({ force: true })
    
 })
 Cypress.Commands.add('Login1', (Username,password) => {
@@ -86,11 +86,10 @@ Cypress.Commands.add('Login2', (Username,password) => {
       
   const user = Username || Cypress.env('Username');
   const pass = password || Cypress.env('password');
-  cy.visit('https://comet.jainam.in/#/startup')
-  cy.wait(1000)
-  cy.get('.login-space-btn').click({force:true})
+  cy.visit('https://jplus.jainam.in/')
+  //cy.get('.login-space-btn').click({force:true})
   //Enter the userid
-  cy.wait(3000)
+  cy.wait(1000)
   cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/div/form/div[1]/kendo-textbox/input').type('M3903')
   
   //click on continue button
@@ -107,15 +106,15 @@ Cypress.Commands.add('Login2', (Username,password) => {
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(3000)
-  // cy.get('.payin-btn > .ng-star-inserted').invoke("removeAttr", "target").click()
+  cy.wait(7000)
+//  cy.get('.payin-btn > .ng-star-inserted').invoke("removeAttr", "target").click()
   //  cy.window().then((win) => {
   //      cy.stub(win, 'open').callsFake((url) => {
   //        win.location.href = url;
   //      });
   //    });
   //    cy.wait(2000)
-    // cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
+  //   cy.xpath('/html/body/app-root/app-layout/div/div/app-dashboard/div[2]/div/app-invest-with-us/div/a[4]').click()
      
   //    // Verify that the page or URL is updated
   //    cy.wait(4000)
@@ -136,6 +135,5 @@ Cypress.Commands.add('Login2', (Username,password) => {
  
  
 })
-
 
     
