@@ -28,7 +28,7 @@ it('Comet_Jainam', () => {
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(3000)
+  cy.wait(7000)
   cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").click({force:true})
     // cy.wait(500)
       cy.xpath("/html[1]/body[1]/app-root[1]/app-layout[1]/app-client-header-navbar[1]/div[1]/div[1]/nav[1]/div[3]/ul[1]/li[3]/a[1]/span[1]/div[1]").should('be.visible')
