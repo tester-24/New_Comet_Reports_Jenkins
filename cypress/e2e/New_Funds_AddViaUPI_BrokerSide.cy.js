@@ -27,7 +27,7 @@ describe('New_Funds_AddViaUPI_Broker ',() =>
   cy.get('#pin2').type(2)
   cy.get('#pin3').type(3)
   cy.get('#pin4').type(4)
-  cy.wait(3000)
+  cy.wait(4000)
   //click on comet icon
   //  cy.wait(500) 
    cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
