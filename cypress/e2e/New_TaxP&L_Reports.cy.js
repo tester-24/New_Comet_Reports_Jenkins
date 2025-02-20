@@ -7,8 +7,11 @@ describe('New_TaxP&L_ReportS ',() =>
     it('New_TaxP&L_Segment_Equity', () => {
     //cy.visit('https://comet.jainam.in/#/startup')
     cy.Login();
+      cy.wait(2000);
+   cy.xpath("//button[@aria-label='Close']").click({force:true});
+  cy.wait(500)
     //Click on tax p&l
-    cy.wait(2000)
+   // cy.wait(2000)
     //  cy.get('[href="#/tax"]').should('be.visible')
     cy.get('[href="#/tax"]').click({ force: true })
     cy.scrollTo('top')
@@ -65,8 +68,11 @@ describe('New_TaxP&L_ReportS ',() =>
   it('New_TaxP&L_Segment_NSE_FNO', () => {
     // cy.visit('https://comet.jainam.in/#/startup')
     cy.Login()
+    cy.wait(2000);
+   cy.xpath("//button[@aria-label='Close']").click({force:true});
+  cy.wait(500)
     //Click on tax p&l
-    cy.wait(1000)
+   // cy.wait(1000)
     // cy.get('[href="#/tax"]').should('be.visible')
     cy.get('[href="#/tax"]').click({ force: true })
     cy.scrollTo('top')
