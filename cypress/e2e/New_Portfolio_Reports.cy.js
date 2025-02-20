@@ -7,6 +7,9 @@ describe('New_Portfolio_Reports ',() =>
    it('New_Portfolio_Report_Myholding', () => {
    // cy.visit('https://comet.jainam.in/#/startup')
     cy.Login();
+     cy.wait(2000);
+   cy.xpath("//button[@aria-label='Close']").click({force:true});
+  cy.wait(500)
     //Click on Portfolio
 
     cy.get('[href="#/portfolio"]').click({ force: true })
@@ -56,6 +59,9 @@ describe('New_Portfolio_Reports ',() =>
   it('New_Portfolio_Report_MyPosition', () => {
    // cy.visit('https://comet.jainam.in/#/startup')
     cy.Login()
+    cy.wait(2000);
+   cy.xpath("//button[@aria-label='Close']").click({force:true});
+  cy.wait(500)
     //Click on Portfolio
     cy.get('[href="#/portfolio"]').click({ force: true })
 
