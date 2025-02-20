@@ -7,8 +7,11 @@ describe('New_Ledger_Report ',() =>
 it('New_Ledger_Report_Segment_All', () => {
     //cy.visit('https://comet.jainam.in/#/startup')
     cy.Login();
+      cy.wait(2000);
+    cy.xpath("//button[@aria-label='Close']").click({force:true});
     //click on ledger
-    cy.get('[href="#/ledger"]').click()
+    cy.wait(1000)
+    cy.get('[href="#/ledger"]').click({force:true});
     // 1)Click on dropdown all
     cy.wait(2000)
     cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
@@ -114,8 +117,11 @@ it('New_Ledger_Report_Segment_All', () => {
   it('New_Ledger_Report_Segment_Equity', () => {
    // cy.visit('https://comet.jainam.in/#/startup')
     cy.Login();
+        cy.wait(2000);
+    cy.xpath("//button[@aria-label='Close']").click({force:true});
     //click on ledger
-    cy.get('[href="#/ledger"]').click()
+    cy.wait(1000)
+    cy.get('[href="#/ledger"]').click({force:true});
     // 1)Click on dropdown all
     cy.wait(5000)
     cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
@@ -221,8 +227,11 @@ it('New_Ledger_Report_Segment_All', () => {
   it('New_Ledger_Report_Segment_FutureOption', () => {
    // cy.visit('https://comet.jainam.in/#/startup')
     cy.Login()
+    cy.wait(2000);
+    cy.xpath("//button[@aria-label='Close']").click({force:true});
     //click on ledger
-    cy.get('[href="#/ledger"]').click()
+    cy.wait(1000)
+    cy.get('[href="#/ledger"]').click({force:true});
     // 1)Click on dropdown all
     cy.wait(2000)
     cy.xpath('/html/body/app-root/app-layout/div/app-ledger/div[1]/form/div[2]/div[1]/kendo-dropdownlist/button').should('be.visible')
