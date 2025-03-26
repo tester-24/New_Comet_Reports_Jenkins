@@ -97,6 +97,7 @@ describe('New_Funds_AddViaUPI_Broker ',() =>
 
   // logout   1126 live
   // click on user profile 
+  cy.wait(3000)
   cy.get('.user-icon').click({ force: true })
   cy.wait(1000)
   cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
