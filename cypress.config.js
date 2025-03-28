@@ -12,7 +12,8 @@ module.exports = defineConfig({
 //projectId: "h2jao1",
   // projectId: "ci1r7w",
 //projectId: "iunoxm",
- projectId: "16gkc9",
+// projectId: "16gkc9",
+ projectId: "6wgjw1",
   reporterOptions: {
    
     charts: true,
