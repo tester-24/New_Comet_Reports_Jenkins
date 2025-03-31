@@ -31,7 +31,7 @@ Cypress.Commands.add('Login', (Username,password) => {
       const user = Username || Cypress.env('Username');
       const pass = password || Cypress.env('password');
       cy.visit('https://jplus.jainam.in/')
-      cy.wait(1000)
+      cy.wait(2000)
       //cy.get('.login-space-btn').click({force:true})
       //Login Flow
      // cy.wait(4000)
