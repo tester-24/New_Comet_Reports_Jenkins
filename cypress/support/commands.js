@@ -57,7 +57,7 @@ Cypress.Commands.add('Login', (Username,password) => {
      cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
      .click({timeout:3000});     
       // click on Reports
-      //cy.wait(4000)
+      cy.wait(1000)
       cy.get('#ReportDropdown').click({ force: true })
    
 })
