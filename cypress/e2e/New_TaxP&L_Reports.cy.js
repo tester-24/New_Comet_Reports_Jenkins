@@ -43,7 +43,7 @@ describe('New_TaxP&L_ReportS ',() =>
     //Click on Download PDF
     cy.wait(2000)
     cy.get(':nth-child(3) > .download-summary-btn').should('be.visible')
-    cy.get(':nth-child(3) > .download-summary-btn').click()
+    cy.get(':nth-child(3) > .download-summary-btn').click({force:true})
 
     //Click on SEND excel MAIL
     cy.wait(2000)
