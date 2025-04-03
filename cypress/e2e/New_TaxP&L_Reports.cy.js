@@ -24,7 +24,7 @@ describe('New_TaxP&L_ReportS ',() =>
 
     //click on year dropdown
     cy.xpath('/html/body/app-root/app-layout/div/app-tax/div/form/div[2]/div[2]/kendo-dropdownlist/button').click()
-    //Select year 2023-2024
+    //Select year 2024-2025
     cy.wait(1000)
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]/span[1]').click()
     cy.scrollTo('top')
@@ -86,7 +86,7 @@ describe('New_TaxP&L_ReportS ',() =>
 
     //click on year dropdown
     cy.xpath('/html/body/app-root/app-layout/div/app-tax/div/form/div[2]/div[2]/kendo-dropdownlist/button').click()
-    //Select year 2023-2024
+    //Select year 2024-2025
     cy.wait(1000)
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[2]/span[1]').click()
     cy.scrollTo('top')
