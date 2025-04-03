@@ -5,7 +5,7 @@
 
 describe('New_Tradelog_ReportS ',() =>
   {
-it('New_Tradelog_Reports_FY_2023-2024', () => {
+it('New_Tradelog_Reports_FY_2024-2025', () => {
     //cy.visit('https://comet.jainam.in/#/startup')
     cy.Login2();
     // after entering pin it goes direct on comet
@@ -34,7 +34,7 @@ it('New_Tradelog_Reports_FY_2023-2024', () => {
     // cy.get('[href="#/tradelog"]').click({force:true})
     // cy.wait(1000)
     cy.scrollTo('top')
-    //Reports for Year 2023-2024
+    //Reports for Year 2024-2025
     //Click on year dropdown
     cy.wait(1500)
     cy.xpath('/html/body/app-root/app-layout/div/app-tradelog/div/form/div[2]/div[1]/kendo-dropdownlist/button').click({force:true})
@@ -57,7 +57,7 @@ it('New_Tradelog_Reports_FY_2023-2024', () => {
 
   })
 
-  it('New_Tradelog_Reports_FY_2024-2025', () => {
+  it('New_Tradelog_Reports_FY_2025-2026', () => {
     cy.Login2();
 
     // after entering pin it goes direct on comet
@@ -84,7 +84,7 @@ it('New_Tradelog_Reports_FY_2023-2024', () => {
          cy.scrollTo('top')
     //Click on year dropdown
     cy.xpath('/html/body/app-root/app-layout/div/app-tradelog/div/form/div[2]/div[1]/kendo-dropdownlist/button').click()
-    //Select year 2024-2025
+    //Select year 2025-2026
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[1]/span[1]').should('be.visible')
     cy.wait(500)
     cy.xpath('/html[1]/body[1]/app-root[1]/kendo-popup[1]/div[1]/kendo-list[1]/div[1]/ul[1]/li[1]/span[1]').click()
