@@ -13,7 +13,8 @@ module.exports = defineConfig({
   // projectId: "ci1r7w",
 //projectId: "iunoxm",
 // projectId: "16gkc9",
- projectId: "6wgjw1",
+// projectId: "6wgjw1",
+projectId: "xuirw5",
   reporterOptions: {
    
     charts: true,
