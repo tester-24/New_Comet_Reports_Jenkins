@@ -100,8 +100,9 @@ describe('New_Funds_AddViaUPI_Broker ',() =>
   cy.wait(3000)
   cy.get('.user-icon').click({ force: true })
   cy.wait(1000)
-  cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
-  // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+ // cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
+   cy.get('.mt-4 > :nth-child(4)').click({force:true})
+     // cy.get('.mt-4 > :nth-child(4)').click({force:true})
   cy.wait(1000)
 
   // cy.xpath('/html/body/div[1]/div[1]/div[2]/div[1]/div[2]/button[2]').click()
