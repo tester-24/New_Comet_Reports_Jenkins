@@ -50,8 +50,9 @@ describe('New_Portfolio_Reports ',() =>
     // click on user profile 
     cy.get('.user-icon').click({ force: true })
     cy.wait(1000)
-    cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
-    // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+    //cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
+     cy.get('.mt-4 > :nth-child(4)').click({force:true})
+     // cy.get('.mt-4 > :nth-child(4)').click({force:true})
     cy.wait(1000)
 
   })
@@ -103,7 +104,8 @@ describe('New_Portfolio_Reports ',() =>
     // click on user profile 
     cy.get('.user-icon').click({ force: true })
     cy.wait(1000)
-    cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
+  //  cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[6]/div/div/div/div[2]/ul/li[4]/a').click({ force: true })
+     cy.get('.mt-4 > :nth-child(4)').click({force:true})
     // cy.get('.mt-4 > :nth-child(4)').click({force:true})
     cy.wait(1000)
 
