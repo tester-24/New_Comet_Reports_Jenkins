@@ -123,8 +123,9 @@ describe('New_Global_Reports ',() =>
     cy.get('.user-icon').click({ force: true })
     cy.wait(500)
     // click on logout 
-    cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({ force: true })
-    // cy.get('.mt-4 > :nth-child(4)').click({force:true})
+    //cy.xpath('/html/body/app-root/app-layout/app-headerpanel/div/div/nav/div/ul/li[5]/div/div/div/div[2]/ul/li[5]/a').click({ force: true })
+    cy.get('.mt-4 > :nth-child(5)').click({force:true}) 
+     // cy.get('.mt-4 > :nth-child(4)').click({force:true})
     cy.wait(1000)
   })
   it('New_Global_Report_Segment_Derivative', () => {
