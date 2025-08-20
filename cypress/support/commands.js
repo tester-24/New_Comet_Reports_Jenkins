@@ -48,10 +48,10 @@ Cypress.Commands.add('Login', (Username,password) => {
       cy.xpath('/html/body/app-root/app-sign-in/div/div/div[2]/app-sign-in-with-username/form/div/button').click()
       
       // enter the pin 
-      cy.get('#pin1').type(1)
-      cy.get('#pin2').type(2)
-      cy.get('#pin3').type(3)
-      cy.get('#pin4').type(4)
+      cy.get('#pin1').type(8)
+      cy.get('#pin2').type(5)
+      cy.get('#pin3').type(2)
+      cy.get('#pin4').type(0)
       //click on comet icon
      cy.wait(4000) 
      cy.xpath('/html/body/app-layout/app-dashboard/section/div/div/div/div/a[3]').invoke("removeAttr", "target") // Remove target="_blank" to avoid opening a new tab
